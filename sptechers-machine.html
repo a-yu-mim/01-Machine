@@ -1,0 +1,189 @@
+<!-- Criado por Marise Miranda | 2017.1 -->
+<!-- Adaptado por Matheus Matos | 2025.1 -->
+<!-- Ultima adaptação por Jay | 2026.3 -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPTecher's Machine</title>
+
+<style>
+    /* corpo */
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #eaeaea;
+    }
+
+    /* título principal */
+    h1 {
+        text-align: center;
+        margin: 25px 0; /*(em cima/baixo, lado/outro) */
+    }
+
+    /* Container que segura tudo */
+  .container {
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 20px;
+        padding: 20px; 
+    }
+
+ /*-|--------------------------|------------------------------------|-
+    | display: flex;           | colocar lado a lado os elementos   |
+    | flex-wrap: wrap;         | quebra linha se não couber         |
+    | justify-content: center; | centralizar (horizontalmente)      |
+    | gap                      | espaçamento entre os cards         |
+    | padding                  | espaço do container e elementos    |
+    | box-sizing: border-box   | faz ficar no final o mesmo tamanho |
+   -|--------------------------|------------------------------------|-*/
+
+
+    /* Card */
+    .main {
+        padding: 20px;
+        border-radius: 12px;
+        width: 260px;
+        background-color: #ffffff;
+    }
+
+    /* Alinhar botão e input de tamanho */
+    input, button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* caixa para inserir dados */
+    input {
+        padding: 8px;
+    }
+
+    /* Botão */
+    button {
+        width: 100%;
+        padding: 8px;
+        border: none;
+        border-radius: 6px;
+        background-color: #1e90ff;
+        color: white;
+        cursor: pointer;
+    }
+
+ /*-|--------------------------|----------------------------------|-
+    | width: 100%;             | O quanto ocupa a largura do card |
+    | border: none;            | remover borda padrão             |
+    | border-radius            | arredondar os cantos             |
+    | cursor: pointer;         | indica que é clicavel com mousde |
+    | padding                  | espaço do botão e letras         |
+   -|--------------------------|----------------------------------|-*/
+
+    /* Efeito do botão  */
+    button:hover {
+        background-color: rgb(12, 12, 90);
+    }
+</style>
+</head>
+
+
+<body>
+<h1>SPTecher's Machine</h1>
+
+<div class="container">
+
+    <!-- Card DECIMAL -->
+    <div class="main">
+        <h3>Decimal:</h3>
+        <input id="input_decimal" type="text"><br><br>
+
+        <button onclick="converterDecimal()">Converter</button>
+
+            <h3>Resultados:</h3>
+            <p>Binário: <span id="dec1"></span></p>
+            <p>Octal: <span id="dec2"></span></p>
+            <p>Hexadecimal: <span id="dec3"></span></p>
+    </div>
+
+    <!-- Card BINÁRIO -->
+    <div class="main">
+        <h3>Binário:</h3>
+        <input id="input_binario" type="text"><br><br>
+
+        <button onclick="converterBinario()">Converter</button>
+
+            <h3>Resultados:</h3>
+            <p>Decimal: <span id="bi1"></span></p>
+            <p>Octal: <span id="bi2"></span></p>
+            <p>Hexadecimal: <span id="bi3"></span></p>
+    </div>
+
+    <!-- Card OCTAL -->
+    <div class="main">
+        <h3>Octal:</h3>
+        <input id="input_octal" type="text"><br><br>
+
+        <button onclick="converterOctal()">Converter</button>
+
+            <h3>Resultados:</h3>
+            <p>Decimal: <span id="octal1"></span></p>
+            <p>Binário: <span id="octal2"></span></p>
+            <p>Hexadecimal: <span id="octal3"></span></p>
+    </div>
+
+    <!-- Card HEXADECIMAL -->
+    <div class="main">
+        <h3>Hexadecimal:</h3>
+        <input id="input_hexa" type="text"><br><br>
+
+        <button onclick="converterHexadecimal()">Converter</button>
+
+            <h3>Resultados:</h3>
+            <p>Decimal: <span id="hexa1"></span></p>
+            <p>Binário: <span id="hexa2"></span></p>
+            <p>Octal: <span id="hexa3"></span></p>
+    </div>
+</div>
+
+
+<script>
+    // CONVERSÃO DECIMAL
+    function converterDecimal() {
+        let decimal = Number(input_decimal.value);
+
+        dec1.innerHTML = decimal.toString(2);  // binário
+        dec2.innerHTML = decimal.toString(8);  // octal
+        dec3.innerHTML = decimal.toString(16); // hexadecimal
+    }
+
+    // CONVERSÃO BINÁRIO
+    function converterBinario() {
+        let binario = parseInt(input_binario.value, 2);
+
+        bi1.innerHTML = binario;              // decimal
+        bi2.innerHTML = binario.toString(8);  // octal
+        bi3.innerHTML = binario.toString(16); // hexadecimal
+    }
+
+    // CONVERSÃO OCTAL
+    function converterOctal() {
+        let octal = parseInt(input_octal.value, 8);
+
+        octal1.innerHTML = octal;              // decimal
+        octal2.innerHTML = octal.toString(2);  // binário
+        octal3.innerHTML = octal.toString(16); // hexadecimal
+    }
+
+    // CONVERSÃO HEXADECIMAL
+    function converterHexadecimal() {
+        let hexadecimal = parseInt(input_hexa.value, 16);
+
+        hexa1.innerHTML = hexadecimal;             // decimal
+        hexa2.innerHTML = hexadecimal.toString(2); // binario
+        hexa3.innerHTML = hexadecimal.toString(8); // octal
+    }
+</script>
+</body>
+
+</html>
