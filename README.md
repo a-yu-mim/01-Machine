@@ -1,15 +1,26 @@
-# 🚀 SPTecher's Machine
+# SPTecher's Machine
 
-Conversor de bases numéricas (Decima, Binário, Octal, Hexadecimal).
+A simple numeral base converter that converts values between Decimal, Binary, Octal, and Hexadecimal systems.
 
-✔  Decimal → Binário, Octal e Hexadecimal  
-✔  Binário → Decimal, Octal e Hexadecimal  
-✔  Octal → Decimal, Binário e Hexadecimal  
-✔  Hexadecimal → Decimal, Binário e Octal  
+## Conversions
 
-##  Como usar :
-- Digite um valor 
-- Clique em "Converter"
+- Decimal → Binary, Octal, Hexadecimal  
+- Binary → Decimal, Octal, Hexadecimal  
+- Octal → Decimal, Binary, Hexadecimal  
+- Hexadecimal → Decimal, Binary, Octal  
 
-## 📷 Print
-<img width="1789" height="664" alt="Captura de tela 2026-03-23 020525" src="https://github.com/user-attachments/assets/1a40dd18-a807-4686-8d5d-2ca78c2118fa" />
+## How to use
+
+- Enter a numeric value  
+- Click on "Convert"  
+- View the result  
+
+## Screenshot
+
+<img width="1789" height="664" alt="Screenshot 2026-03-23 020525" src="https://github.com/user-attachments/assets/1a40dd18-a807-4686-8d5d-2ca78c2118fa" />
+
+## Features
+
+- Supports multiple numeral systems  
+- Fast and accurate conversion  
+- Simple and responsive interface  
